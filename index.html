@@ -109,7 +109,7 @@ $.getJSON( url, function(data) {
 
     var item = data[i];   
 	  
-	item.date = item.date.replace("\" , ""); //2023 date change to 2023\/12\/30
+	item.date = item.date.replace('\\' , ''); //2023 date change to 2023\/12\/30
 				      
 	if (item.isholiday=="是")
     	{
