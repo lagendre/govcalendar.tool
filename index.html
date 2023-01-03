@@ -111,7 +111,7 @@ $.getJSON( url, function(data) {
 		  
 	if (item.isholiday=="是")
     	{
-		if (item.holidayCategory=="特定節日"){   
+		if (item.holidaycategory=="特定節日"){   
       			let myDate= new Date(item.date);	
       			if(myDate.getDay() == 6 || myDate.getDay() == 0)
         	 		caldays.push( holidayStr(item) );
@@ -122,7 +122,7 @@ $.getJSON( url, function(data) {
 	    		caldays.push( holidayStr(item) );
 		
      	}else{
-		if (item.holidayCategory=="補行上班日")
+		if (item.holidaycategory=="補行上班日")
 			caldays.push( makeupdayStr(item) );
 		else  
 			caldays.push( workdayStr(item) );
