@@ -108,7 +108,9 @@ $.getJSON( url, function(data) {
   for(var i in data) {    
 
     var item = data[i];   
-		  
+	  
+	item.date = item.date.replace('\', ''); //2023 date change to 2023\/12\/30
+				      
 	if (item.isholiday=="是")
     	{
 		if (item.holidaycategory=="特定節日"){   
